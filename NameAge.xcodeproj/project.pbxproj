@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		56BDD0BC272B59C7000C60F6 /* NameAge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 56BDD0BA272B59C7000C60F6 /* NameAge.xcdatamodeld */; };
 		56BDD0BE272B59D4000C60F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56BDD0BD272B59D4000C60F6 /* Assets.xcassets */; };
 		56BDD0C1272B59D4000C60F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56BDD0BF272B59D4000C60F6 /* LaunchScreen.storyboard */; };
+		56BDD0D2272B5BB1000C60F6 /* NameAgeCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDD0D1272B5BB1000C60F6 /* NameAgeCount.swift */; };
+		56BDD0D5272B5BDD000C60F6 /* NameAgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56BDD0D4272B5BDC000C60F6 /* NameAgeController.swift */; };
+		70C6FAE50789776ECBE8C7C4 /* Pods_NameAge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A65ED634C17021EF7AEAC25B /* Pods_NameAge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		56BDD0BD272B59D4000C60F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56BDD0C0272B59D4000C60F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56BDD0C2272B59D4000C60F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56BDD0D1272B5BB1000C60F6 /* NameAgeCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAgeCount.swift; sourceTree = "<group>"; };
+		56BDD0D4272B5BDC000C60F6 /* NameAgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameAgeController.swift; sourceTree = "<group>"; };
+		5C3FA4D379C18DCB4C74C1CA /* Pods-NameAge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NameAge.debug.xcconfig"; path = "Target Support Files/Pods-NameAge/Pods-NameAge.debug.xcconfig"; sourceTree = "<group>"; };
+		A65ED634C17021EF7AEAC25B /* Pods_NameAge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NameAge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2FFD096EF24C86A5E8D7D0 /* Pods-NameAge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NameAge.release.xcconfig"; path = "Target Support Files/Pods-NameAge/Pods-NameAge.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C6FAE50789776ECBE8C7C4 /* Pods_NameAge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2234F2F4EF2F6343886B732D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A65ED634C17021EF7AEAC25B /* Pods_NameAge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		56BDD0A5272B59C7000C60F6 = {
 			isa = PBXGroup;
 			children = (
 				56BDD0B0272B59C7000C60F6 /* NameAge */,
 				56BDD0AF272B59C7000C60F6 /* Products */,
+				856E69A594323BC7872BB81B /* Pods */,
+				2234F2F4EF2F6343886B732D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +77,51 @@
 		56BDD0B0272B59C7000C60F6 /* NameAge */ = {
 			isa = PBXGroup;
 			children = (
+				56BDD0CC272B5B82000C60F6 /* Controller */,
 				56BDD0B1272B59C7000C60F6 /* AppDelegate.swift */,
+				56BDD0CD272B5B88000C60F6 /* View */,
 				56BDD0B3272B59C7000C60F6 /* SceneDelegate.swift */,
-				56BDD0B5272B59C7000C60F6 /* ViewController.swift */,
-				56BDD0B7272B59C7000C60F6 /* Main.storyboard */,
+				56BDD0CE272B5B8D000C60F6 /* Model */,
 				56BDD0BD272B59D4000C60F6 /* Assets.xcassets */,
 				56BDD0BF272B59D4000C60F6 /* LaunchScreen.storyboard */,
 				56BDD0C2272B59D4000C60F6 /* Info.plist */,
 				56BDD0BA272B59C7000C60F6 /* NameAge.xcdatamodeld */,
 			);
 			path = NameAge;
+			sourceTree = "<group>";
+		};
+		56BDD0CC272B5B82000C60F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				56BDD0D4272B5BDC000C60F6 /* NameAgeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		56BDD0CD272B5B88000C60F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				56BDD0B7272B59C7000C60F6 /* Main.storyboard */,
+				56BDD0B5272B59C7000C60F6 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		56BDD0CE272B5B8D000C60F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56BDD0D1272B5BB1000C60F6 /* NameAgeCount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		856E69A594323BC7872BB81B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C3FA4D379C18DCB4C74C1CA /* Pods-NameAge.debug.xcconfig */,
+				DD2FFD096EF24C86A5E8D7D0 /* Pods-NameAge.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56BDD0C5272B59D4000C60F6 /* Build configuration list for PBXNativeTarget "NameAge" */;
 			buildPhases = (
+				B9A3787A2AEDB3ACE4A5C4DE /* [CP] Check Pods Manifest.lock */,
 				56BDD0AA272B59C7000C60F6 /* Sources */,
 				56BDD0AB272B59C7000C60F6 /* Frameworks */,
 				56BDD0AC272B59C7000C60F6 /* Resources */,
+				9E4DC4E6309A72C776664577 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,12 +191,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9E4DC4E6309A72C776664577 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NameAge/Pods-NameAge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NameAge/Pods-NameAge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NameAge/Pods-NameAge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9A3787A2AEDB3ACE4A5C4DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NameAge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56BDD0AA272B59C7000C60F6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56BDD0D2272B5BB1000C60F6 /* NameAgeCount.swift in Sources */,
 				56BDD0B6272B59C7000C60F6 /* ViewController.swift in Sources */,
+				56BDD0D5272B5BDD000C60F6 /* NameAgeController.swift in Sources */,
 				56BDD0B2272B59C7000C60F6 /* AppDelegate.swift in Sources */,
 				56BDD0BC272B59C7000C60F6 /* NameAge.xcdatamodeld in Sources */,
 				56BDD0B4272B59C7000C60F6 /* SceneDelegate.swift in Sources */,
@@ -287,6 +387,7 @@
 		};
 		56BDD0C6272B59D4000C60F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C3FA4D379C18DCB4C74C1CA /* Pods-NameAge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +406,7 @@
 		};
 		56BDD0C7272B59D4000C60F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD2FFD096EF24C86A5E8D7D0 /* Pods-NameAge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
